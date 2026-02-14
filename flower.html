@@ -31,12 +31,57 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+  /* --- NUEVO CÓDIGO: LLUVIA DE CORAZONES --- */
+  .heart {
+    position: fixed;
+    top: -1vh;
+    font-size: 20px; /* Tamaño base */
+    color: #ff6699; /* Color rosa intenso */
+    opacity: 0.7; /* Un poco transparentes */
+    z-index: -1; /* Detrás de las flores, delante del fondo */
+    animation: fall linear forwards;
+  }
+
+  /* Animación de caída */
+  @keyframes fall {
+    to {
+      transform: translateY(105vh) rotate(360deg); /* Caen hasta abajo y rotan */
+    }
+  }
+
+  /* Personalización de cada corazón (para que no caigan iguales) */
+  .heart:nth-child(1) { left: 5%; animation-duration: 6s; animation-delay: 1s; font-size: 25px; }
+  .heart:nth-child(2) { left: 15%; animation-duration: 8s; animation-delay: 3s; font-size: 18px; }
+  .heart:nth-child(3) { left: 25%; animation-duration: 7s; animation-delay: 0s; }
+  .heart:nth-child(4) { left: 35%; animation-duration: 9s; animation-delay: 2s; font-size: 22px; }
+  .heart:nth-child(5) { left: 45%; animation-duration: 6.5s; animation-delay: 4s; }
+  .heart:nth-child(6) { left: 55%; animation-duration: 7.5s; animation-delay: 1s; font-size: 28px; }
+  .heart:nth-child(7) { left: 65%; animation-duration: 8.5s; animation-delay: 3.5s; }
+  .heart:nth-child(8) { left: 75%; animation-duration: 7s; animation-delay: 2s; font-size: 20px; }
+  .heart:nth-child(9) { left: 85%; animation-duration: 9.5s; animation-delay: 0.5s; }
+  .heart:nth-child(10){ left: 95%; animation-duration: 6s; animation-delay: 3s; font-size: 24px; }
+</style>
 </style>
 </head>
 
 <body class="not-loaded">
   <!-- Background -->
   <div class="night"></div>
+  <body class="not-loaded">
+  <div class="night"></div>
+
+  <div class="heart">❤</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤️</div>
+
+  <div class="flowers" ...>
   <div style="position: absolute; top: 15%; width: 100%; text-align: center; z-index: 1000;">
     
     </h1>

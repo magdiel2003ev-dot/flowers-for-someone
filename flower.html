@@ -10,6 +10,28 @@
 
   <!-- Document Title -->
   <title>FLOWERS</title>
+<style>
+  /* Esto hace que el fondo se mueva */
+  .night {
+    /* Colores del cielo: Azul oscuro, Morado y Negro */
+    background: linear-gradient(-45deg, #000000, #1a0b2e, #110f36, #000000);
+    background-size: 400% 400%;
+    animation: movimientoCielo 15s ease infinite;
+    
+    /* Asegura que cubra toda la pantalla */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que se quede detrás de las flores */
+  }
+
+  /* Esta es la animación */
+  @keyframes movimientoCielo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
 </head>
 
 <body class="not-loaded">
